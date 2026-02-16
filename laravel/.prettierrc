@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/prettierrc",
+    "semi": true,
+    "singleQuote": true,
+    "singleAttributePerLine": false,
+    "htmlWhitespaceSensitivity": "css",
+    "printWidth": 150,
+    "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+    "importOrder": ["<TYPES>", "<TYPES>^(@)", "<TYPES>^[.]","" ,"<BUILTIN_MODULES>", "", "<THIRD_PARTY_MODULES>", "", "^@/", "", "^[.]", ""],
+    "tailwindFunctions": ["clsx", "cn"],
+    "overrides": [
+        {
+            "files": ["**/*.yml", "**/*.vue", "**/*.ts", "**/*.js", "**/*.css", "**/*.scss", "**/*.json"],
+            "options": {
+                "tabWidth": 2
+            }
+        }
+    ]
+}

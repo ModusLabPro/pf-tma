@@ -1,0 +1,290 @@
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+
+@import 'primeicons/primeicons.css';
+
+@import '../../public/fonts/fonts.css';
+@import './nebo.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Mazzard', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-vast: 'VastXL', sans-serif;
+
+  --text-vast-title-bold: 40px;
+  --text-vast-title-bold--line-height: 48px;
+  --text-vast-title-bold--font-weight: 700;
+  --text-vast-title-additional: 32px;
+  --text-vast-title-additional--line-height: 38px;
+  --text-vast-title-additional--font-weight: 700;
+  --text-vast-mob-title-bold: 24px;
+  --text-vast-mob-title-bold--line-height: 28px;
+  --text-vast-mob-title-bold--font-weight: 700;
+  --text-vast-additional: 20px;
+  --text-vast-additional--line-height: 24px;
+  --text-vast-additional--font-weight: 400;
+  --text-vast-mob-additional: 12px;
+  --text-vast-mob-additional--line-height: 14px;
+  --text-vast-mob-additional--font-weight: 400;
+
+  --text-button: 20px;
+  --text-button--line-height: 24px;
+  --text-button--font-weight: 500;
+  --text-button-small: 14px;
+  --text-button-small--line-height: 16px;
+  --text-button-small--font-weight: 500;
+
+  --text-title: 60px;
+  --text-title--line-height: 72px;
+  --text-title--font-weight: 400;
+
+  --text-mob-title: 26px;
+  --text-mob-title--line-height: 32px;
+  --text-mob-title--font-weight: 400;
+
+  --text-title-medium: 60px;
+  --text-title-medium--line-height: 72px;
+  --text-title-medium--font-weight: 500;
+
+  --text-h1: 48px;
+  --text-h1--line-height: 56px;
+  --text-h1--font-weight: 500;
+
+  --text-h2: 40px;
+  --text-h2--line-height: 48px;
+  --text-h2--font-weight: 500;
+
+  --text-large-bold: 32px;
+  --text-large-bold--line-height: 38px;
+  --text-large-bold--font-weight: 700;
+
+  --text-large-medium: 32px;
+  --text-large-medium--line-height: 38px;
+  --text-large-medium--font-weight: 500;
+
+  --text-large: 32px;
+  --text-large--line-height: 38px;
+  --text-large--font-weight: 400;
+
+  --text-heavy-bold: 26px;
+  --text-heavy-bold--line-height: 32px;
+  --text-heavy-bold--font-weight: 700;
+
+  --text-heavy-medium: 26px;
+  --text-heavy-medium--line-height: 32px;
+  --text-heavy-medium--font-weight: 500;
+
+  --text-heavy: 26px;
+  --text-heavy--line-height: 32px;
+  --text-heavy--font-weight: 400;
+
+  --text-medium-bold: 24px;
+  --text-medium-bold--line-height: 30px;
+  --text-medium-bold--font-weight: 700;
+
+  --text-medium-medium: 24px;
+  --text-medium-medium--line-height: 30px;
+  --text-medium-medium--font-weight: 500;
+
+  --text-medium: 24px;
+  --text-medium--line-height: 30px;
+  --text-medium--font-weight: 400;
+
+  --text-default-bold: 20px;
+  --text-default-bold--line-height: 24px;
+  --text-default-bold--font-weight: 700;
+
+  --text-default-medium: 20px;
+  --text-default-medium--line-height: 24px;
+  --text-default-medium--font-weight: 500;
+
+  --text-default: 20px;
+  --text-default--line-height: 24px;
+  --text-default--font-weight: 400;
+
+  --text-small-bold: 18px;
+  --text-small-bold--line-height: 22px;
+  --text-small-bold--font-weight: 700;
+
+  --text-small-medium: 18px;
+  --text-small-medium--line-height: 22px;
+  --text-small-medium--font-weight: 500;
+
+  --text-small: 18px;
+  --text-small--line-height: 22px;
+  --text-small--font-weight: 400;
+
+  --text-subsidiary-medium: 14px;
+  --text-subsidiary-medium--line-height: 16px;
+  --text-subsidiary-medium--font-weight: 500;
+
+  --text-mob-small-bold: 16px;
+  --text-mob-small-bold--line-height: 20px;
+  --text-mob-small-bold--font-weight: 700;
+
+  --text-mob-small-medium: 16px;
+  --text-mob-small-medium--line-height: 20px;
+  --text-mob-small-medium--font-weight: 500;
+
+  --text-mob-small-reg: 16px;
+  --text-mob-small-reg--line-height: 20px;
+  --text-mob-small-reg--font-weight: 400;
+
+  --text-subsidiary-reg: 14px;
+  --text-subsidiary-reg--line-height: 16px;
+  --text-subsidiary-reg--font-weight: 400;
+
+  --text-complimentary-bold: 12px;
+  --text-complimentary-bold--line-height: 14px;
+  --text-complimentary-bold--font-weight: 700;
+
+  --text-complimentary-reg: 12px;
+  --text-complimentary-reg--line-height: 14px;
+  --text-complimentary-reg--font-weight: 400;
+
+  --color-default: #a39874;
+  --color-non-active: #f1efe0;
+  --color-stroke: #ccc5b0;
+  --color-full: #e4e1d8;
+  --color-subsidiary-filling: #fbf7f3;
+  --color-text: #02283f;
+  --color-text-secondary: #09263a;
+  --color-additional: #83939e;
+  --color-subsidiary: #867f7f;
+  --color-filling: #e7eaec;
+  --color-input: #f3f5f7;
+  --color-card: #f8f7f7;
+  --color-complimentary: #d4d3d3;
+  --color-marker: #ed1c24;
+  --color-light-gray: #f5f7fa;
+  --color-delete: #f04e27;
+  --color-push-green: #caf2d7;
+  --color-ready-green: #0a9570;
+
+  --radius-10: 10px;
+  --radius-20: 20px;
+}
+
+html {
+  height: 100%;
+  color: var(--color-text);
+  scroll-behavior: smooth;
+}
+
+#app {
+  height: 100%;
+}
+
+/* Primary and Surface Palettes */
+:root {
+  --p-primary-50: #ecfdf5;
+  --p-primary-100: #d1fae5;
+  --p-primary-200: #a7f3d0;
+  --p-primary-300: #6ee7b7;
+  --p-primary-400: #34d399;
+  --p-primary-500: #02283f;
+  --p-primary-600: #02283f;
+  --p-primary-700: #047857;
+  --p-primary-800: #065f46;
+  --p-primary-900: #064e3b;
+  --p-primary-950: #022c22;
+  --p-surface-0: #ffffff;
+  --p-surface-50: #fafafa;
+  --p-surface-100: #f4f4f5;
+  --p-surface-200: #e4e4e7;
+  --p-surface-300: #d4d4d8;
+  --p-surface-400: #a1a1aa;
+  --p-surface-500: #71717a;
+  --p-surface-600: #52525b;
+  --p-surface-700: #3f3f46;
+  --p-surface-800: #27272a;
+  --p-surface-900: #18181b;
+  --p-surface-950: #09090b;
+  --p-content-border-radius: 6px;
+  --p-scrollbar-width: 16px;
+}
+
+/* Light */
+:root {
+  --p-primary-color: var(--p-primary-500);
+  --p-primary-contrast-color: var(--p-surface-0);
+  --p-primary-hover-color: var(--p-primary-600);
+  --p-primary-active-color: var(--p-primary-700);
+  --p-content-border-color: var(--p-surface-200);
+  --p-content-hover-background: var(--p-surface-100);
+  --p-content-hover-color: var(--p-surface-800);
+  --p-highlight-background: var(--p-primary-50);
+  --p-highlight-color: var(--p-primary-700);
+  --p-highlight-focus-background: var(--p-primary-100);
+  --p-highlight-focus-color: var(--p-primary-800);
+  --p-text-color: var(--p-surface-700);
+  --p-text-hover-color: var(--p-surface-800);
+  --p-text-muted-color: var(--p-surface-500);
+  --p-text-hover-muted-color: var(--p-surface-600);
+}
+
+/*
+ * Dark Mode
+ * Defaults to system, change the dark variant selector to match the CSS variable configuration.
+ * For example;
+ * @custom-variant dark (&:where(.app-dark, .app-dark *));
+ * should match to;
+ * :root[class="app-dark"]
+*/
+:root[class='dark'] {
+  --p-primary-color: var(--p-primary-400);
+  --p-primary-contrast-color: var(--p-surface-900);
+  --p-primary-hover-color: var(--p-primary-300);
+  --p-primary-active-color: var(--p-primary-200);
+  --p-content-border-color: var(--p-surface-700);
+  --p-content-hover-background: var(--p-surface-800);
+  --p-content-hover-color: var(--p-surface-0);
+  --p-highlight-background: color-mix(in srgb, var(--p-primary-400), transparent 84%);
+  --p-highlight-color: rgba(255, 255, 255, 0.87);
+  --p-highlight-focus-background: color-mix(in srgb, var(--p-primary-400), transparent 76%);
+  --p-highlight-focus-color: rgba(255, 255, 255, 0.87);
+  --p-text-color: var(--p-surface-0);
+  --p-text-hover-color: var(--p-surface-0);
+  --p-text-muted-color: var(--p-surface-400);
+  --p-text-hover-muted-color: var(--p-surface-300);
+}
+
+.p-overflow-hidden {
+  @media (max-width: 1120px) {
+    padding-right: 0 !important;
+  }
+}
+
+/*.without-scrollbar {*/
+/*  scrollbar-width: thin;*/
+/*}*/
+
+.without-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  background: transparent;
+}
+
+.without-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.without-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.without-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.without-scrollbar {
+  scrollbar-width: thin; /* "auto", "thin", или "none" */
+  scrollbar-color: #c1c1c1 #f1f1f1; /* thumb-color track-color */
+}

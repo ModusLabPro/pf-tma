@@ -1,0 +1,13 @@
+<svg width="504" height="400" viewBox="0 0 504 400" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M504 155C504 163.889 498.133 171.711 489.6 174.2L470.4 179.8C461.867 182.289 456 190.111 456 199V201C456 209.889 461.867 217.711 470.4 220.2L489.6 225.8C498.133 228.289 504 236.111 504 245V380C504 391.046 495.046 400 484 400H20C8.95432 400 0 391.046 0 380V20C0 8.95431 8.95431 0 20 0H484C495.046 0 504 8.95431 504 20V155Z" fill="url(#paint0_linear_4314_142648)"/>
+<path d="M504 155C504 163.889 498.133 171.711 489.6 174.2L470.4 179.8C461.867 182.289 456 190.111 456 199V201C456 209.889 461.867 217.711 470.4 220.2L489.6 225.8C498.133 228.289 504 236.111 504 245V380C504 391.046 495.046 400 484 400H20C8.95432 400 0 391.046 0 380V20C0 8.95431 8.95431 0 20 0H484C495.046 0 504 8.95431 504 20V155Z" fill="url(#pattern0_4314_142648)"/>
+<defs>
+<pattern id="pattern0_4314_142648" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_4314_142648" transform="matrix(0.00207762 0 0 0.0026178 -0.00693925 0)"/>
+</pattern>
+<linearGradient id="paint0_linear_4314_142648" x1="43.5" y1="29.5" x2="484.5" y2="385" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F2F2F2"/>
+<stop offset="1" stop-color="#F2F2F2"/>
+</linearGradient>
+</defs>
+</svg>

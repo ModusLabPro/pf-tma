@@ -1,0 +1,105 @@
+services:
+  app:
+    image: $REGISTRY/${GROUP}/${PROJECT}/app:$TAG
+    restart: always
+    expose:
+      - "80"
+    environment:
+      - DB_HOST=$DB_HOST
+      - DB_PORT=$DB_PORT
+      - DB_USERNAME=$DB_USERNAME
+      - DB_DATABASE=$DB_DATABASE
+      - DB_PASSWORD=$DB_PASSWORD
+      - MAIL_MAILER=$MAIL_MAILER
+      - MAIL_HOST=$MAIL_HOST
+      - MAIL_PORT=$MAIL_PORT
+      - MAIL_USERNAME=$MAIL_USERNAME
+      - MAIL_PASSWORD=$MAIL_PASSWORD
+      - MAIL_ENCRYPTION=$MAIL_ENCRYPTION
+      - MAIL_FROM_ADDRESS=$MAIL_FROM_ADDRESS
+      - MAIL_FROM_NAME=$MAIL_FROM_NAME
+      - DADATA_TOKEN=$DADATA_TOKEN
+      - DADATA_SECRET=$DADATA_SECRET
+      - VITE_DADATA_TOKEN=$VITE_DADATA_TOKEN
+      - VKONTAKTE_CLIENT_ID=$VKONTAKTE_CLIENT_ID
+      - VKONTAKTE_CLIENT_SECRET=$VKONTAKTE_CLIENT_SECRET
+      - API_KEY=$API_KEY
+      - BITRIX24_URL=$BITRIX24_URL
+      - BITRIX24_API_KEY=$BITRIX24_API_KEY
+      - YANDEX_CLIENT_ID=$YANDEX_CLIENT_ID
+      - YANDEX_CLIENT_SECRET=$YANDEX_CLIENT_SECRET
+      - SMS_SERVICE_API_KEY=$SMS_SERVICE_API_KEY
+    volumes:
+      - ./data/storage:/var/www/html/storage:rw
+    depends_on:
+      - db
+    container_name: app
+    hostname: app
+    networks:
+      - appnet
+
+  db:
+    image: postgres:15-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./data/db:/var/lib/postgresql/data:rw
+    container_name: db
+    hostname: db
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "postgres", "-h", "localhost" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 10s
+    networks:
+      - appnet
+
+  pgadmin:
+    image: dpage/pgadmin4:7
+    user: "0:0"
+    container_name: pgadmin4
+    hostname: pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_LOGIN}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:7003:80"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./data/pgadmin:/var/lib/pgadmin
+    healthcheck:
+      test: [ "CMD", "nc", "-vz", "${PGADMIN_HOST}", "${PGADMIN_OPEN_PORT}" ]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+    networks:
+      - appnet
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    hostname: portainer
+    restart: always
+    ports:
+      - "127.0.0.1:8000:8000"   # HTTP management UI
+      - "127.0.0.1:9000:9000"   # HTTP API
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/portainer_data:/data
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    name: appnet
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450    
+    external: false

@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Mazzard';
+  src:
+    url('../fonts/mazzard/MazzardM-Regular.woff') format('woff'),
+    url('../fonts/mazzard/MazzardM-Regular.woff2') format('woff2'),
+    url('../fonts/mazzard/MazzardM-Regular.ttf') format('truetype'),
+    url('../fonts/mazzard/MazzardM-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src:
+    url('../fonts/mazzard/MazzardM-Medium.woff') format('woff'),
+    url('../fonts/mazzard/MazzardM-Medium.woff2') format('woff2'),
+    url('../fonts/mazzard/MazzardM-Medium.ttf') format('truetype'),
+    url('../fonts/mazzard/MazzardM-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mazzard';
+  src:
+    url('../fonts/mazzard/MazzardM-Bold.woff') format('woff'),
+    url('../fonts/mazzard/MazzardM-Bold.woff2') format('woff2'),
+    url('../fonts/mazzard/MazzardM-Bold.ttf') format('truetype'),
+    url('../fonts/mazzard/MazzardM-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*--------------------------------------------*/
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Thin.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-ExtraLight.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Light.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Regular.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Medium.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Bold.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-ExtraBold.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VastXL';
+  src:
+    url('../fonts/VastXL/VastXL-Black.woff') format('woff'),
+    url('../fonts/VastXL/VastXL-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,40 @@
+{
+  "settings": {
+
+    "http": {
+      "max_body_size": 10485760
+    }
+  },
+
+  "listeners": {
+    "*:80": {
+      "pass": "routes"
+    }
+  },
+
+  "routes": [
+    {
+      "match": {
+        "uri": "!/index.php"
+      },
+      "action": {
+        "share": "/var/www/html/public$uri",
+        "fallback": {
+          "pass": "applications/laravel"
+        }
+      }
+    }
+  ],
+
+  "applications": {
+    "laravel": {
+      "type": "php",
+      "root": "/var/www/html/public",
+      "processes": 45,
+      "index": "index.php",
+      "script": "index.php",
+      "user": "www-data",
+      "group": "www-data"
+    }
+  }
+}

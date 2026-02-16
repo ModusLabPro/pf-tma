@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /user/
+Disallow: /cart
+Disallow: /order/
+Disallow: /admin
+Disallow: /verify-email
+Disallow: /*?search=
+Disallow: /*?popup=redirect
+Sitemap: https://shop.primefoods.ru/sitemap.xml

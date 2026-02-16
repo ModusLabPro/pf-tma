@@ -1,0 +1,17 @@
+import { v as vueExports } from "../ssr.js";
+const _hoisted_1 = {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 16 16",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+};
+function render(_ctx, _cache) {
+  return vueExports.openBlock(), vueExports.createElementBlock("svg", _hoisted_1, _cache[0] || (_cache[0] = [
+    vueExports.createStaticVNode('<g clip-path="url(#clip0_4558_179952)"><path d="M6 10L5.5 8" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 10L10.5 8" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 10V8" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10.8531 4.07C11.2645 3.97954 11.6903 3.97672 12.1028 4.06172C12.5153 4.14672 12.9053 4.31764 13.2475 4.56334C13.5896 4.80904 13.8761 5.12403 14.0884 5.4878C14.3007 5.85157 14.434 6.25596 14.4797 6.67467C14.5254 7.09338 14.4824 7.51702 14.3535 7.91801C14.2246 8.319 14.0127 8.68835 13.7316 9.00203C13.4506 9.31572 13.1066 9.5667 12.7221 9.73864C12.3376 9.91058 11.9212 9.99963 11.5 10H4.5C4.0788 9.99963 3.66241 9.91058 3.27791 9.73864C2.89341 9.5667 2.54943 9.31572 2.26835 9.00203C1.98727 8.68835 1.77539 8.319 1.6465 7.91801C1.51762 7.51702 1.47461 7.09338 1.52029 6.67467C1.56596 6.25596 1.69929 5.85157 1.9116 5.4878C2.12391 5.12403 2.41044 4.80904 2.75254 4.56334C3.09464 4.31764 3.48465 4.14672 3.89718 4.06172C4.3097 3.97672 4.73551 3.97954 5.14687 4.07" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 5C5 4.20435 5.31607 3.44129 5.87868 2.87868C6.44129 2.31607 7.20435 2 8 2C8.79565 2 9.55871 2.31607 10.1213 2.87868C10.6839 3.44129 11 4.20435 11 5" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12.5 9.82935V13C12.5 13.1326 12.4473 13.2598 12.3536 13.3535C12.2598 13.4473 12.1326 13.5 12 13.5H4C3.86739 13.5 3.74021 13.4473 3.64645 13.3535C3.55268 13.2598 3.5 13.1326 3.5 13V9.82935" stroke="#09263A" stroke-linecap="round" stroke-linejoin="round"></path></g><defs><clipPath id="clip0_4558_179952"><rect width="16" height="16" fill="white"></rect></clipPath></defs>', 2)
+  ]));
+}
+const IconChefHat = { render };
+export {
+  IconChefHat as I
+};
